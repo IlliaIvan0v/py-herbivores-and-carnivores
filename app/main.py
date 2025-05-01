@@ -33,4 +33,4 @@ class Carnivore(Animal):
     def bite(victim: Herbivore) -> None:
         if victim.hidden is False and isinstance(victim, Herbivore):
             victim.health -= 50
-            victim.is_dead()
+            victim.handle_death()
