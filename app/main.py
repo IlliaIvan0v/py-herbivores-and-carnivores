@@ -10,10 +10,10 @@ class Animal:
         self.hidden = False
         self.alive.append(self)
 
-    def is_alive(self) -> annotations:
+    def is_alive(self) -> bool:
         return self.health > 0
 
-    def is_dead(self) -> None:
+    def handle_death(self) -> None:
         if self.is_alive() is False:
             Animal.alive.remove(self)
             print(f"{self.name} is dead")
